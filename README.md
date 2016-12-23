@@ -9,5 +9,7 @@ fail on OTP 19.0.x (again, any 1.2 or 1.3 version).
 
 The latest build that demonstrates this is at https://travis-ci.org/scouten/otp-pattern-match/builds/186424731.
 
+A bug has been filed against Elixir language at https://github.com/elixir-lang/elixir/issues/5586.
+
 Simplified from https://github.com/mmmries/sqlitex.
 
