@@ -9,11 +9,16 @@ defmodule Sqlitex.Row do
     types = Enum.map(types, fn type ->
       type |> Atom.to_string |> String.downcase
     end)
-    values = row |> Tuple.to_list |> Enum.zip(types) |> Enum.map(&translate_value/1)
+    values = row |> Tuple.to_list |> Enum.zip(types) |> Enum.map(&itv/1)
 
     columns
       |> Enum.zip(values)
       |> Enum.into(into)
+  end
+
+  defp itv({value, type}) do
+    IO.puts "translate_value{#{inspect value}, #{inspect type} }"
+    translate_value({value, type})
   end
 
   ## Convert SQLite values/types to Elixir types
