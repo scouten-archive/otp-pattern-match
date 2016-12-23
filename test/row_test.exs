@@ -3,8 +3,7 @@ defmodule Sqlitex.RowTest do
   import Sqlitex.Row
 
   test "parses decimal types" do
-    [row] = from([:"DECIMAL(2,1)"], [:cost], [{1}], [])
     value = Decimal.new(1, 10, -1)
-    assert [{:cost, value}] == row
+    assert [{:cost, value}] == translate_value({1, "decimal(2,1)"})
   end
 end
