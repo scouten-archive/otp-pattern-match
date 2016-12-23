@@ -1,4 +1,4 @@
-defmodule Sqlitex.Row do
+defmodule PatternMatchBug do
   def translate_value({:undefined, _type}) do
     nil
   end

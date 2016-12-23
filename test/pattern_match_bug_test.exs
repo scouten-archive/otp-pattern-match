@@ -1,6 +1,6 @@
-defmodule Sqlitex.RowTest do
+defmodule PatternMatchBugTest do
   use ExUnit.Case
-  import Sqlitex.Row
+  import PatternMatchBug
 
   test "parses decimal types" do
     value = Decimal.new(1, 10, -1)
