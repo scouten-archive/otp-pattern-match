@@ -22,6 +22,8 @@ defmodule Sqlitex.Row do
     nil
   end
 
+  # INTERESTING DETAIL: If I remove the following two clauses, the test passes
+  # on OTP 19 on Ubuntu (Travis CI).
   defp translate_value({0, "boolean"}), do: false
   defp translate_value({1, "boolean"}), do: true
 
