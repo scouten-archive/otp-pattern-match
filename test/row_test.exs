@@ -4,6 +4,6 @@ defmodule Sqlitex.RowTest do
 
   test "parses decimal types" do
     value = Decimal.new(1, 10, -1)
-    assert [{:cost, value}] == translate_value({1, "decimal(2,1)"})
+    assert value == translate_value({1, "decimal(2,1)"})
   end
 end
